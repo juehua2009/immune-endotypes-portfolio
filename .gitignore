@@ -1,0 +1,7 @@
+data/
+*.h5ad
+*.rds
+*.RData
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store

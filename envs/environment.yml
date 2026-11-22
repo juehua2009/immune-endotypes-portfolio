@@ -1,0 +1,14 @@
+name: endotypes
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - scanpy
+  - scvi-tools
+  - celltypist
+  - squidpy
+  - cell2location
+  - liana
+  - decoupler
+  - anndata
+  - leidenalg
+  - jupyterlab
