@@ -101,3 +101,65 @@ Analyses of public datasets; all data credited to original authors.
   IL11-IL11RA stays below LIANA detection (the IAF group is only 148 cells);
   the loop is claimed at expression level for Martin, communication level for
   Smillie.
+
+- Kinchen mouse nb06 (Nov 22, 2026): CROSS-SPECIES REPLICATION — the four
+  highest-program fibroblast clusters (1, 2, 6, 7; program scores 0.55-1.05)
+  are entirely DSS-specific (0.000 share in healthy) and together make up ~74%
+  of DSS fibroblasts; Il11 peaks exactly in clusters 1/2; Osm sits only in the
+  small immune cluster 13, Osmr across fibroblasts. Caveats recorded: Chi3l1 is
+  absent from the mouse matrices (authors' filtering; score ran on 8/9 genes),
+  and condition is confounded with file in Kinchen's deposit (healthy and DSS
+  are separate matrices) — stated in methods. Analysis core of the paper is now
+  complete; remaining: summary figure notebook (exact numbers, one uniform IAF
+  rule across cohorts) and the manuscript draft.
+
+- Cross-cohort summary (nb07, Nov 22, 2026) — FINAL NUMBERS (inflammatory
+  fibroblast share of fibroblasts, one uniform rule):
+  Smillie UC: Healthy 0.24% / Non-inflamed 7.08% / Inflamed 12.90%.
+  Kinchen UC (subcluster 6): Healthy 0.03% / UC 13.94%.
+  Martin CD: IAF 0.06% -> 11.06%; CHI3L1-high 0.12% -> 33.26%;
+  combined 0.19% -> 44.32% (Uninvolved -> Involved).
+  Kinchen mouse: Healthy 0.00% / DSS 73.82%.
+  Saved: results/cross_cohort_summary.csv + figures/cross_cohort_iaf_share.png.
+  ANALYSIS COMPLETE. Remaining: manuscript draft only.
+
+**Response-validation design (added Nov 22, 2026):** single-cell anti-TNF
+response data are genuinely scarce (Martin is effectively the only cohort).
+The field-standard cross-validation route is pretreatment bulk biopsy cohorts
+with mucosal-healing response labels — verified on GEO Nov 22, 2026:
+GSE12251 (UC, infliximab, response at 8 wk), GSE16879 (UC + CD, infliximab,
+4-6 wk), GSE73661 (UC, infliximab subset, 4-6 wk), GSE23597 (UC, infliximab).
+Plan (notebook 09): score the IAF program (9-gene set + the DE-derived
+signature from notebook 08A) in each pretreatment biopsy and test
+responder vs non-responder separation per cohort. This is the route West 2017
+(OSM) and Martin 2019 (GIMATS bulk validation) used. Note: generic bulk
+non-response signatures are occupied territory (e.g. a 2026 68-gene consensus
+analysis of the same cohorts; an IGFBP5 fibroblast multi-omics paper) — our
+claim stays cell-state-specific: the signature of one defined fibroblast
+state, discovered at single-cell resolution.
+
+- Notebook 08 results (Nov 22, 2026): (A) IAF molecular identity — pseudobulk
+  DESeq2 IAF vs other fibroblasts (Martin, Involved): 25 genes up at LFC>1
+  (MMP1 +7.2, SAA1 +8.0, IL24 +5.6, MASP1, WFDC2, CXCL5, CSF3, MMP3, CEMIP,
+  TWIST2 — matrix proteases + acute phase + neutrophil chemotaxis) and a
+  STRONGER down side (MGP, NDUFA4L2, PPP1R14A, SPARCL1, IGFBP7, GPX3 —
+  homeostatic fibroblast identity lost). The 25-gene up set is the transfer
+  signature for the bulk response validation (notebook 09). (B) Per-patient
+  burden is subgroup-concentrated, not graded: Martin Involved median 0.000 /
+  mean 0.276 / max 0.837 (n=11); Smillie Inflamed median 0.051 / max 0.535;
+  Kinchen libraries are pooled (n=2) — footnote only. (C) OSM+ myeloid fraction
+  is dilution-confounded (Martin 9.9% vs 6.2%; Smillie reversed) — NOT used;
+  ligand side rests on inflammatory-monocyte expansion + receptor switch.
+  (E) IAF burden does NOT correlate with GIMATS components within Martin
+  patients (plasma r=0.19, myeloid 0.03, T -0.18; n=11) — the state is an
+  independent stromal axis, not a GIMATS passenger. (D) decoupler PROGENy/
+  DoRothEA pending an API fix for the installed version.
+  (D) Drivers (decoupler 2.2 PROGENy/DoRothEA, Martin fibroblasts, Involved):
+  TNFa +4.82, NFkB +4.04, JAK-STAT +3.10 are the top pathway activities;
+  TGFb is DOWN (-0.75) - an inflammatory, not classic-fibrotic, state.
+  TF activities agree: RELA +3.03, NFKB1 +2.81, FOSL1/JUN (AP-1), IRF1,
+  STAT2 up; SRF -1.44, ELK1, MEF2C down (homeostatic program switched off);
+  TWIST2 is up both as a gene (DE) and as TF activity. Discussion point:
+  co-driving by JAK-STAT (gp130/OSM family) alongside TNF offers a mechanism
+  for anti-TNF insufficiency in high-burden patients. Notebook 08 COMPLETE.
+  Remaining: notebook 09 (bulk response validation) + manuscript draft.
