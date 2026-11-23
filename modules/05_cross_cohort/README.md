@@ -83,3 +83,21 @@ Analyses of public datasets; all data credited to original authors.
   State-level replication now confirmed in all three human cohorts; remaining
   module work: Martin LIANA (nb05), human integration, Kinchen mouse arm, and
   the cross-cohort summary figure with exact enrichment numbers.
+
+- Martin nb05 LIANA (Nov 22, 2026): OSM-OSMR REPLICATED as a switch — Involved
+  1.43 (Myeloid -> Fibroblast), Uninvolved 0.00; OSM-LIFR and TNF-TNFRSF1A also
+  Involved-only. IL11-IL11RA absent at compartment resolution (IL11 is confined
+  to fibroblast subcluster 7, diluted by pooling — resolution artifact, tested
+  at subcluster resolution in nb05b). IL1B-SIGIRR present in both states at
+  similar strength (3.02 vs 2.66, different targets) — the Smillie brake
+  gradient does NOT replicate in the involved-vs-uninvolved contrast, which has
+  no healthy arm; the SIGIRR claim rests on Smillie + Kinchen, reported as is.
+
+- Martin nb05b (fibroblast-split LIANA, Nov 22, 2026): the OSM switch sharpens —
+  Involved best pair is Myeloid -> Fib_CHI3L1 at 2.39 (vs 1.43 pooled), absent in
+  Uninvolved. The label counts are themselves a headline: Fib_IAF = 148 Involved
+  vs 1 Uninvolved; Fib_CHI3L1 = 445 vs 2 — inflammatory fibroblast states make
+  up 44% of involved fibroblasts vs 0.2% of uninvolved, a near-binary expansion.
+  IL11-IL11RA stays below LIANA detection (the IAF group is only 148 cells);
+  the loop is claimed at expression level for Martin, communication level for
+  Smillie.
