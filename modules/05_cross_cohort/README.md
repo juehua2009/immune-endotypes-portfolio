@@ -210,3 +210,42 @@ state, discovered at single-cell resolution.
   single-cell integration notebook (Smillie + Martin scVI joint integration,
   Kinchen projected by program score) as the paper's remaining substantive
   piece — runs on his Mac.
+
+- Notebook 11 (Nov 23, 2026) — SINGLE-CELL INTEGRATION, built and transferred;
+  run pending on his Mac: scVI joint integration of the circuit compartments
+  (Smillie stromal + myeloid; Martin fibroblast cluster 10 + myeloid cluster 4;
+  shared genes; batch = cohort), joint Leiden, IAF cluster by the uniform rule,
+  agreement check against the nb07 shares, 4-panel UMAP figure; Kinchen handled
+  as a score-level projection (its obs print is inspected first, final cell
+  patched to its real column names). Push of nb09/nb10 updates VERIFIED Nov 23,
+  2026: commit 444369c.
+- Notebook 11 Kinchen projection RESULT (Nov 23, 2026, his Mac run): fibroblast
+  clusters by the COL1A1 rule = 0,1,2,3,5,7,8,9,11,14; all 9 program genes
+  present; joint IAF cluster median score = 0.768 used as the projection
+  threshold. Healthy fibroblasts: mean score -0.213, 0.00% above threshold.
+  UC fibroblasts: mean +0.147, 8.25% above threshold. Score-level projection in
+  the third cohort agrees with the nb02 subclustering read (13.94% by
+  subcluster; 8.25% by the stricter joint-median threshold — same direction,
+  threshold-dependent magnitude). Integration main outputs (cluster table +
+  agreement table) still to be pasted by him for the record.
+- Notebook 11 INTEGRATION RESULT (Nov 23, 2026, his Mac run): joint-space IAF
+  shares (nb07 per-cohort reference in brackets) — Smillie: Healthy 0.00
+  [0.24], Non-inflamed 0.97 [7.08], Inflamed 7.89 [12.90]; Martin: Uninvolved
+  0.06 [0.19 combined], Involved 11.81 [IAF-only 11.06; IAF+CHI3L1 combined
+  44.32]. Read: the joint cluster recovers the canonical IAF state almost
+  exactly in Martin (11.81 vs 11.06) and preserves ordering + near-zero
+  baselines in Smillie, with systematically lower shares (one strict joint
+  cluster vs the broader author label — a core-vs-broad definition effect).
+  The CHI3L1-high population does NOT merge into the shared IAF cluster:
+  integration separates a shared canonical IAF core from a Crohn's-skewed
+  CHI3L1-high companion state. Cluster table (mixing fractions) still to be
+  pasted for the record; UMAP figure saved (figures/integration_umap.png);
+  integrated object saved on his Mac (data/integrated/).
+- Notebook 11 cluster table (Nov 23, 2026): 26 joint clusters; IAF = cluster 16
+  (n=1,093; frac_martin 0.145 vs 13.7% Martin overall — composition-matched
+  mixing; ~158 Martin cells ≈ Martin's own 148-cell IAF). Cluster 23 = Smillie-
+  only high-score satellite (329 cells, 0.664). Cluster 21 = Martin-only
+  fibroblast cluster (442 cells, score 0.208) — the CHI3L1-high companion.
+  Integration Methods + Results paragraphs ADDED to the manuscript draft
+  (VM + Word rebuilt). Module 5 analysis is now COMPLETE; remaining work is
+  the manuscript Introduction + Discussion, held per his Nov 22 instruction.

@@ -1,0 +1,11 @@
+cohort,condition,joint_iaf_share_pct
+Smillie,Healthy,0.0
+Smillie,Inflamed,7.89
+Smillie,Involved,
+Smillie,Non-inflamed,0.97
+Smillie,Uninvolved,
+Martin,Healthy,
+Martin,Inflamed,
+Martin,Involved,11.81
+Martin,Non-inflamed,
+Martin,Uninvolved,0.06
