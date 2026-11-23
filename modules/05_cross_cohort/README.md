@@ -180,3 +180,33 @@ state, discovered at single-cell resolution.
   Methods + Results draft written Nov 22, 2026
   (manuscript_methods_results_draft.md, incl. the bulk-validation section);
   Introduction and Discussion held per Juehua's instruction.
+
+- CORRECTION + comparators (Nov 23, 2026): the nb09 bulk result is NOT a new
+  discovery — Friedrich et al. (Nat Med 2021) validated fibroblast/neutrophil
+  pathotype signatures for therapy non-response across cohorts whose public sets
+  include GSE12251 and GSE16879 (their Data Availability lists both), following
+  West et al. 2017 (OSM). Positioning corrected to "independent replication and
+  extension" in the manuscript draft and notebook 09 read-out. Comparator run
+  (notebook 09, final cell): OSM alone AUC 0.985 (GSE12251) / 0.851 (GSE23597)
+  matches or beats both signatures there; generic INFLAM6 score is comparable
+  overall (pooled 0.869 vs SIG9 0.879; CD 0.894 vs 0.818) — the bulk AUCs largely
+  reflect baseline inflammatory burden. Severity control: within GSE73661
+  baseline-Mayo-3 patients (n=19), SIG9 retains 0.859 while SIG25 0.705, OSM
+  0.679, INFLAM6 0.692 — suggestive only. Results:
+  results/bulk_response_comparators.csv. Discussion must reconcile drivers with
+  Friedrich's IL-1R (not TNF) dependence: NF-kB/AP-1 activity is downstream of
+  IL1R as well; PROGENy "TNFa" footprint is not TNF-specific; IL1R1 is in the
+  IAF signature and the SIGIRR brake is lost — data are compatible with IL-1 as
+  upstream driver, JAK-STAT as the gp130 arm.
+
+- Bulk combined analysis (notebook 10, Nov 23, 2026, VM-verified): five
+  independent strata meta-analysed (Hedges g, DL random effects): SIG9 pooled
+  g = 1.44 [1.05, 1.84] — the largest of the four scores (SIG25 1.18, INFLAM6
+  1.13, OSM 0.96), I2 = 0% throughout. LODO incremental test: adding SIG9 to
+  OSM+INFLAM6 gives delta AUC -0.023/+0.094/-0.068/+0.057/+0.125 (mean +0.037)
+  — NO consistent out-of-cohort gain. Honest verdict recorded in the notebook:
+  bulk stays replication-grade. Results: results/bulk_combined_meta.csv +
+  results/bulk_combined_lodo.csv. QUEUED NEXT (Juehua, Nov 23, 2026): the
+  single-cell integration notebook (Smillie + Martin scVI joint integration,
+  Kinchen projected by program score) as the paper's remaining substantive
+  piece — runs on his Mac.
