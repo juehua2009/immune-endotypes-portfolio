@@ -163,3 +163,20 @@ state, discovered at single-cell resolution.
   co-driving by JAK-STAT (gp130/OSM family) alongside TNF offers a mechanism
   for anti-TNF insufficiency in high-burden patients. Notebook 08 COMPLETE.
   Remaining: notebook 09 (bulk response validation) + manuscript draft.
+
+- Notebook 09 (Nov 22, 2026) — BULK RESPONSE VALIDATION, VM-verified, notebook
+  reproduces on Mac: the IAF signatures scored in pretreatment bulk biopsies
+  separate anti-TNF responders from non-responders in ALL FOUR cohorts.
+  SIG25 AUCs: GSE12251 0.93 (p=2.5e-4), GSE16879 UC 0.74 / CD 0.83 / pooled 0.83,
+  GSE23597 0.71, GSE73661 0.73. SIG9 AUCs: 0.86 / 0.95 / 0.82 / 0.88 pooled /
+  0.77 / 0.87 — the compact 9-gene program is at least as strong as the 25-gene
+  DE set in 4 of 6 strata. Labels: 12251 WK8RSPHM (12R/11NR); 16879 before-first-
+  IFX biopsies (UC 8R/16NR, CD 20R/17NR, biopsy level); 23597 W0 non-placebo
+  (25R/7NR — small NR arm); 73661 IFX W0 with response derived from the same
+  individual's W4/6 Mayo subscore (8R/15NR). Probe maps extracted from GEO
+  platform tables into sig_probes.json (GPL570 31/31 genes; GPL6244 30/31,
+  TWIST2 unmapped). Results: results/bulk_response_validation.csv.
+  ANALYSIS NOW COMPLETE (notebooks 01-09). Remaining: manuscript only —
+  Methods + Results draft written Nov 22, 2026
+  (manuscript_methods_results_draft.md, incl. the bulk-validation section);
+  Introduction and Discussion held per Juehua's instruction.
